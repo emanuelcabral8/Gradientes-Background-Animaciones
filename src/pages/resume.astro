@@ -2,178 +2,176 @@
 
 ---
 
-<html lang="en">
-    <html lang="es">
-        <head>
-            <title>Curriculum Vitae</title>
-            <meta charset="UTF-8" />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1.0"
-            />
-            <style>
-                *::before,
-                *::after {
-                    box-sizing: border-box;
-                    margin: 0;
-                    padding: 0;
-                }
+<html lang="es">
+    <head>
+        <title>Curriculum Vitae</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-                html {
-                    font-size: 16px;
-                }
+            html {
+                font-size: 16px;
+            }
 
-                body {
-                    min-height: 100vh;
-                    line-height: 1.5;
-                }
+            body {
+                min-height: 100vh;
+                line-height: 1.5;
+            }
 
-                img,
-                picture,
-                video,
-                canvas,
-                svg {
-                    display: block;
-                    max-width: 100%;
-                }
+            img,
+            picture,
+            video,
+            canvas,
+            svg {
+                display: block;
+                max-width: 100%;
+            }
 
-                input,
-                button,
-                textarea,
-                select {
-                    font: inherit;
+            input,
+            button,
+            textarea,
+            select {
+                font: inherit;
+            }
+            :root {
+                --primary-color: oklch(0.38 0.0676 146.65);
+                --secondary-color: oklch(0.57 0.0385 193.86);
+                --my-platinum: oklch(0.92 0.0075 197.02);
+                font-family: "Roboto", sans-serif;
+            }
+            body {
+                box-sizing: border-box;
+                width: 100%;
+                max-width: 600px;
+                padding: 20px;
+                margin: 20px auto;
+                background-color: var(--secondary-color);
+            }
+            .introduction {
+                box-sizing: border-box;
+                padding: 30px;
+                border: 2px solid black;
+                background-color: var(--my-platinum);
+                animation: my-slide 0.2s ease-in-out;
+                transition: transform 0.2s ease-out;
+            }
+            section {
+                box-sizing: border-box;
+                width: 100 px;
+                padding: 20px;
+                margin: 20px;
+                border: 2px solid var(--primary-color);
+                background-color: var(--my-platinum);
+                animation: my-slide 0.2s ease-in-out;
+                transition: transform 0.2s ease-out;
+            }
+            section:hover:not(.contact),
+            .introduction:hover {
+                transform: translate3d(10px, -15px, -25px);
+            }
+            h1,
+            h2 {
+                color: var(--primary-color);
+            }
+            @keyframes my-slide {
+                0% {
+                    transform: translateX(-100%) scale(0.5);
                 }
-                :root {
-                    --primary-color: oklch(0.38 0.0676 146.65);
-                    --secondary-color: oklch(0.57 0.0385 193.86);
-                    --my-platinum: oklch(0.92 0.0075 197.02);
-                    font-family: "Roboto", sans-serif;
+                50% {
                 }
-                body {
-                    box-sizing: border-box;
-                    width: 100%;
-                    max-width: 600px;
-                    padding: 20px;
-                    margin: 20px auto;
-                    background-color: var(--secondary-color);
+                100% {
+                    transform: translateX(0) scale(1);
                 }
-                .introduction {
-                    box-sizing: border-box;
-                    padding: 30px;
-                    border: 2px solid black;
-                    background-color: var(--my-platinum);
-                    animation: my-slide 0.2s ease-in-out;
-                    transition: transform 0.2s ease-out;
-                }
-                section {
-                    box-sizing: border-box;
-                    width: 100 px;
-                    padding: 20px;
-                    margin: 20px;
-                    border: 2px solid var(--primary-color);
-                    background-color: var(--my-platinum);
-                    animation: my-slide 0.2s ease-in-out;
-                    transition: transform 0.2s ease-out;
-                }
-                section:hover:not(.contact),
-                .introduction:hover {
-                    transform: translate3d(10px, -15px, -25px);
-                }
-                h1,
-                h2 {
-                    color: var(--primary-color);
-                }
-                @keyframes my-slide {
-                    0% {
-                        transform: translateX(-100%) scale(0.5);
-                    }
-                    50% {
-                    }
-                    100% {
-                        transform: translateX(0) scale(1);
-                    }
-                }
-                form {
-                    overflow: hidden;
-                }
-                button {
-                    background-color: var(--my-platinum);
-                    float: right;
-                }
-                /* Aplica a todos los inputs y textareas */
-                #name,
-                #subject,
-                #message {
-                    box-sizing: border-box;
-                    width: 100%;
-                    border: 1px solid var(--primary-color);
-                    margin-bottom: 15px;
-                }
-            </style>
-        </head>
-    </html>
-    <body>
-        <header class="introduction">
-            <h1>Eduardo Emanuel Cabral Figueredo</h1>
-            <p>
-                Estudiante de Ciencias de la Computación. Busco una oportunidad
-                para iniciar mi carrera profesional, con el objetivo de
-                aprender, desarrollarme y adquirir nuevas habilidades.
-            </p>
-        </header>
-        <section class="education">
-            <h2>Estudios</h2>
-            <ul>
-                <li>
-                    <h3>Licenciatura en Ciencias de la Computación</h3>
-                    <p>Universidad de Buenos Aires</p>
-                    <p>Mar 2022 - Actualidad</p>
-                </li>
-                <li>
-                    <h3>Bachiller en Economía y Administración</h3>
-                    <p>Instituto Educacional San Miguel</p>
-                    <p>Mar 2016 - Dic 2021</p>
-                </li>
-            </ul>
-        </section>
-        <section class="languages">
-            <h2>Idiomas</h2>
-            <ul>
-                <li>Inglés B2 (First Certificate)</li>
-                <li>Alemán A1</li>
-            </ul>
-        </section>
-        <section class="it-skills">
-            <h2>Conocimientos IT</h2>
-            <ul>
-                <li>Haskell</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>Git</li>
-                <li>Paquete Office</li>
-            </ul>
-        </section>
-        <section class="gen-skills">
-            <h2>Competencias</h2>
-            <ul>
-                <li>Adaptabilidad</li>
-                <li>Trabajo en equipo</li>
-                <li>Resolución de problemas</li>
-                <li>Proactividad</li>
-                <li>Atención al detalle</li>
-            </ul>
-        </section>
-        <section class="contact">
-            <h2>Contacto</h2>
-            <form>
-                <label for="name">Nombre:</label>
-                <input id="name" />
-                <label for="subject">Asunto:</label>
-                <input id="subject" />
-                <label for="message">Mensaje:</label>
-                <textarea id="message" rows="4" cols="50"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </body>
+            }
+            form {
+                overflow: hidden;
+            }
+            button {
+                background-color: var(--my-platinum);
+                float: right;
+            }
+            /* Aplica a todos los inputs y textareas */
+            #name,
+            #subject,
+            #message {
+                box-sizing: border-box;
+                width: 100%;
+                border: 1px solid var(--primary-color);
+                margin-bottom: 15px;
+            }
+            .introduction__name {
+                text-align: center;
+            }
+        </style>
+    </head>
 </html>
+<body>
+    <header class="introduction">
+        <h1 class = "introduction__name">Eduardo Emanuel Cabral Figueredo</h1>
+        <p>
+            Estudiante de Ciencias de la Computación. Busco una oportunidad para
+            iniciar mi carrera profesional, con el objetivo de aprender,
+            desarrollarme y adquirir nuevas habilidades.
+        </p>
+    </header>
+    <section class="education">
+        <h2>Estudios</h2>
+        <ul>
+            <li>
+                <h3>Licenciatura en Ciencias de la Computación</h3>
+                <p>Universidad de Buenos Aires</p>
+                <p>Mar 2022 - Actualidad</p>
+            </li>
+            <li>
+                <h3>Bachiller en Economía y Administración</h3>
+                <p>Instituto Educacional San Miguel</p>
+                <p>Mar 2016 - Dic 2021</p>
+            </li>
+        </ul>
+    </section>
+    <section class="languages">
+        <h2>Idiomas</h2>
+        <ul>
+            <li>Inglés B2 (First Certificate)</li>
+            <li>Alemán A1</li>
+        </ul>
+    </section>
+    <section class="it-skills">
+        <h2>Conocimientos IT</h2>
+        <ul>
+            <li>Haskell</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Git</li>
+            <li>Paquete Office</li>
+        </ul>
+    </section>
+    <section class="gen-skills">
+        <h2>Competencias</h2>
+        <ul>
+            <li>Adaptabilidad</li>
+            <li>Trabajo en equipo</li>
+            <li>Resolución de problemas</li>
+            <li>Proactividad</li>
+            <li>Atención al detalle</li>
+        </ul>
+    </section>
+    <section class="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input id="name" />
+            <label for="subject">Asunto:</label>
+            <input id="subject" />
+            <label for="message">Mensaje:</label>
+            <textarea id="message" rows="4" cols="50"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
