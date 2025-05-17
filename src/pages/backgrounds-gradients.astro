@@ -6,6 +6,7 @@
         <title>Gradientes y fondos</title>
     </head>
     <body>
+        <a href="/">Volver al inicio</a>
         <section class="gradients">
             <h1>Linear-gradient</h1>
             <article class="linear-container">
@@ -24,13 +25,12 @@
             </article>
         </section>
         <h1>Background</h1>
-        <section class ="backgrounds">
-            <article class ="image_1"></article>
-            <article class ="image_2"></article>
-             <article class ="image_3"></article>
-             <article class ="image_4"> </article>
-              <article class ="image_5"> </article>
-
+        <section class="backgrounds">
+            <article class="image_1"></article>
+            <article class="image_2"></article>
+            <article class="image_3"></article>
+            <article class="image_4"></article>
+            <article class="image_5"></article>
         </section>
     </body>
 </html>
@@ -39,19 +39,21 @@
     :root {
         --url: url("https://play-lh.googleusercontent.com/BoAvMI_6JGNRBp_3gFaVuLuqW_4J-rjtbR_giKFoJRvZmDiPtDlnLMur9cT7sTTfeos");
         --url2: url("https://store-images.s-microsoft.com/image/apps.15385.70406876433810089.4beffaca-3fee-4154-a21f-ecd9b3bedbb3.14eef101-5fe5-4892-bc4f-c290d9d50d7c?h=862&format=jpg");
+        background-color: oklch(0.96 0.0328 107);
     }
-    .gradients article, .backgrounds {
+    .gradients article,
+    .backgrounds {
         display: flex;
         flex-direction: row;
     }
-    .gradients section, .backgrounds article{
+    .gradients section,
+    .backgrounds article {
         box-sizing: border-box;
         width: 300px;
         height: 300px;
         padding: 20px;
         border: 2px solid black;
         margin: 10px;
-        
     }
     .first-linear {
         background: linear-gradient(
@@ -75,45 +77,50 @@
         );
     }
     .first-radial {
-        background: radial-gradient(
-            oklch(0.23 0.13 195),
-            oklch(0.99 0.02 195)
-        );
+        background: radial-gradient(oklch(0.23 0.13 195), oklch(0.99 0.02 195));
     }
     .second-radial {
-        background: radial-gradient(circle at 10%,
+        background: radial-gradient(
+            circle at 10%,
             oklch(0.57 0.21 307) 75%,
             oklch(0.36 0.15 27)
         );
     }
     .conic {
-            background: conic-gradient(oklch(0.36 0.15 27),
-            oklch(0.57 0.21 307),  oklch(0.99 0.02 195), oklch(0.99 0.02 31)
+        background: conic-gradient(
+            oklch(0.36 0.15 27),
+            oklch(0.57 0.21 307),
+            oklch(0.99 0.02 195),
+            oklch(0.99 0.02 31)
         );
     }
-        .image_1 {
-            background-image: var(--url);
-            background-size: cover;
-        }
-        .image_2{
-            background-image: var(--url);
-            background-size: 50%;
-        }
-        .image_3 {
-            background-image: var(--url);
-            background-size: 150px 150px;
-            background-position: 25% 75%;
-            background-repeat: space;
-        }
-        .image_4 {
-            background-image: var(--url);
-            background-size: 100px 100px;
-            background-attachment: fixed;
-        }
-        .image_5 {
-            background-image: var(--url), var(--url2);
-             background-size: 100px 100px, cover;
-             background-repeat: space, no-repeat;
-             background-position: top right, center;
-        }
+    .image_1 {
+        background-image: var(--url);
+        background-size: cover;
+    }
+    .image_2 {
+        background-image: var(--url);
+        background-size: 50%;
+    }
+    .image_3 {
+        background-image: var(--url);
+        background-size: 150px 150px;
+        background-position: 25% 75%;
+        background-repeat: space;
+    }
+    .image_4 {
+        background-image: var(--url);
+        background-size: 100px 100px;
+        background-attachment: fixed;
+    }
+    .image_5 {
+        background-image: var(--url), var(--url2);
+        background-size:
+            100px 100px,
+            cover;
+        background-repeat: space, no-repeat;
+        background-position:
+            top right,
+            center;
+    }
 </style>

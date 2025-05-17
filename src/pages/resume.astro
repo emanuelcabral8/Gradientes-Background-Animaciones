@@ -72,6 +72,7 @@
             <textarea id="message" rows="4" cols="50"></textarea>
             <button type="submit">Enviar</button>
         </form>
+        <a href="/">Volver al inicio</a>
     </section>
 </body>
       <style>
@@ -110,6 +111,7 @@
                 --primary-color: oklch(0.38 0.0676 146.65);
                 --secondary-color: oklch(0.57 0.0385 193.86);
                 --my-platinum: oklch(0.92 0.0075 197.02);
+                --my-grey: oklch(73.16% 0 0);
                 font-family: "Roboto", sans-serif;
             }
             body {
@@ -162,17 +164,24 @@
             button {
                 background-color: var(--my-platinum);
                 float: right;
+
             }
-            /* Aplica a todos los inputs y textareas */
+            button:hover {
+                background-color: oklch(65.34% 0 0);
+                transition: background-color 0.2s ease-in-out;
+            }
             #name,
             #subject,
             #message {
                 box-sizing: border-box;
                 width: 100%;
-                border: 1px solid var(--primary-color);
+                border: 1px solid var(--my-grey);
                 margin-bottom: 15px;
             }
             .introduction__name {
                 text-align: center;
+            }
+            a{
+                color:var(--primary-color);
             }
         </style>
