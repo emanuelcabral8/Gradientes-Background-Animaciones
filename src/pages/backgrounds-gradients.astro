@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gradientes y fondos</title>
+    </head>
+    <body>
+        <section class="gradients">
+            <h1>Linear-gradient</h1>
+            <article class="linear-container">
+                <section class="first-linear"></section>
+                <section class="second-linear"></section>
+                <section class="third-linear"></section>
+            </article>
+            <h1>Radial-gradient</h1>
+            <article class="radial-container">
+                <section class="first-radial"></section>
+                <section class="second-radial"></section>
+            </article>
+            <h1>Conic-gradient</h1>
+            <article class="conic-container">
+                <section class="conic"></section>
+            </article>
+        </section>
+        <h1>Background</h1>
+        <section class ="backgrounds">
+            <article class ="image_1"></article>
+            <article class ="image_2"></article>
+             <article class ="image_3"></article>
+             <article class ="image_4"> </article>
+              <article class ="image_5"> </article>
+
+        </section>
+    </body>
+</html>
+
+<style>
+    :root {
+        --url: url("https://play-lh.googleusercontent.com/BoAvMI_6JGNRBp_3gFaVuLuqW_4J-rjtbR_giKFoJRvZmDiPtDlnLMur9cT7sTTfeos");
+        --url2: url("https://store-images.s-microsoft.com/image/apps.15385.70406876433810089.4beffaca-3fee-4154-a21f-ecd9b3bedbb3.14eef101-5fe5-4892-bc4f-c290d9d50d7c?h=862&format=jpg");
+    }
+    .gradients article, .backgrounds {
+        display: flex;
+        flex-direction: row;
+    }
+    .gradients section, .backgrounds article{
+        box-sizing: border-box;
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        border: 2px solid black;
+        margin: 10px;
+        
+    }
+    .first-linear {
+        background: linear-gradient(
+            15deg,
+            oklch(0.32 0.1001 1.88),
+            oklch(0.42 0.15 22.88)
+        );
+    }
+    .second-linear {
+        background: linear-gradient(
+            0deg,
+            oklch(0.52 0.1129 291.44),
+            oklch(0.73 0.1286 256.85)
+        );
+    }
+    .third-linear {
+        background: linear-gradient(
+            90deg,
+            oklch(0.99 0.02 31),
+            oklch(0.66 0.21 31)
+        );
+    }
+    .first-radial {
+        background: radial-gradient(
+            oklch(0.23 0.13 195),
+            oklch(0.99 0.02 195)
+        );
+    }
+    .second-radial {
+        background: radial-gradient(circle at 10%,
+            oklch(0.57 0.21 307) 75%,
+            oklch(0.36 0.15 27)
+        );
+    }
+    .conic {
+            background: conic-gradient(oklch(0.36 0.15 27),
+            oklch(0.57 0.21 307),  oklch(0.99 0.02 195), oklch(0.99 0.02 31)
+        );
+    }
+        .image_1 {
+            background-image: var(--url);
+            background-size: cover;
+        }
+        .image_2{
+            background-image: var(--url);
+            background-size: 50%;
+        }
+        .image_3 {
+            background-image: var(--url);
+            background-size: 150px 150px;
+            background-position: 25% 75%;
+            background-repeat: space;
+        }
+        .image_4 {
+            background-image: var(--url);
+            background-size: 100px 100px;
+            background-attachment: fixed;
+        }
+        .image_5 {
+            background-image: var(--url), var(--url2);
+             background-size: 100px 100px, cover;
+             background-repeat: space, no-repeat;
+             background-position: top right, center;
+        }
+</style>
